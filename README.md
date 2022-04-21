@@ -6,17 +6,17 @@
 
 + `Sqlite`
 
-  ![](C:/Users/26921/Desktop/FastAPI/sqlite_sync_read_start.png)
+  ![](./images/sqlite_sync_read_start.png)
 
-  ![](C:/Users/26921/Desktop/FastAPI/sqlite_sync_read_end.png)
+  ![](./images/sqlite_sync_read_end.png)
 
   ><font color="red">耗时 `18` s</font>
 
 + `Mysql`
 
-  ![](C:/Users/26921/Desktop/FastAPI/mysql_sync_start.png)
+  ![](./images/mysql_sync_start.png)
 
-  ![](C:/Users/26921/Desktop/FastAPI/mysql_sync_end.png)
+  ![](./images/mysql_sync_end.png)
 
   ><font color="red">耗时 `18` s</font>
 
@@ -26,17 +26,17 @@
 
 + `Sqlite`
 
-  ![](C:/Users/26921/Desktop/FastAPI/sqlite_async_read_start.png)
+  ![](./images/sqlite_async_read_start.png)
 
-  ![](C:/Users/26921/Desktop/FastAPI/sqlite_async_read_end.png)
+  ![](./images/sqlite_async_read_end.png)
 
   ><font color="red">耗时近 `18` s</font>
 
 + `Mysql`
 
-  ![](C:/Users/26921/Desktop/FastAPI/mysql_async_start.png)
+  ![](./images/mysql_async_start.png)
 
-  ![](C:/Users/26921/Desktop/FastAPI/mysql_async_end.png)
+  ![](./images/mysql_async_end.png)
 
   ><font color="red">耗时近 `18` s</font>
 
