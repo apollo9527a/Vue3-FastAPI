@@ -7,13 +7,22 @@ import uvicorn
 from fastapi import FastAPI
 
 from apis import api_async, api_sync
+from database_session import database
 from models import Base, Note
 from session_async import async_engine
 from session_sync import engine, DBSession
 
 app = FastAPI()
-app.include_router(api_async.router, prefix='/async')
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
+# app.include_router(api_async.router, prefix='/async')
 # app.include_router(api_sync.router, prefix='/sync')
+# app.include_router(api_sync.router, prefix='/database') # mysql中并不突出
 
 
 def sync_init():
@@ -43,12 +52,14 @@ async def async_init():
 @app.on_event("startup")
 async def startup():
     # sync_init()
-    await async_init()
+    # await async_init()
+    await database.connect()
     pass
 
 
 @app.on_event("shutdown")
 async def shutdown():
+    await database.disconnect()
     pass
 
 
